@@ -25,13 +25,13 @@
   <parent>
     <groupId>org.apache.hbase.connectors</groupId>
     <artifactId>hbase-connectors</artifactId>
-    <version>${revision}</version>
+    <version>1.0.1-SNAPSHOT</version>
     <relativePath>../</relativePath>
   </parent>
 
   <artifactId>spark</artifactId>
   <packaging>pom</packaging>
-  <version>${revision}</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>Apache HBase - Spark</name>
   <description>Spark Connectors for Apache HBase</description>
 
@@ -45,11 +45,14 @@
   <properties>
     <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
     <jackson.version>2.12.5</jackson.version>
-    <spark.version>3.3.2</spark.version>
     <!-- The following version is in sync with Spark's choice
          Please take caution when this version is modified -->
-    <scala.version>2.12.15</scala.version>
-    <scala.binary.version>2.12</scala.binary.version>
+<!--    <spark.version>3.3.2</spark.version>-->
+<!--    <scala.version>2.12.15</scala.version>-->
+<!--    <scala.binary.version>2.12</scala.binary.version>-->
+    <spark.version>2.1.0</spark.version>
+    <scala.version>2.11.8</scala.version>
+    <scala.binary.version>2.11</scala.binary.version>
   </properties>
 
   <dependencyManagement>
@@ -57,17 +60,17 @@
       <dependency>
         <groupId>org.apache.hbase.connectors.spark</groupId>
         <artifactId>hbase-spark</artifactId>
-        <version>${revision}</version>
+        <version>1.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hbase.connectors.spark</groupId>
         <artifactId>hbase-spark-protocol</artifactId>
-        <version>${revision}</version>
+        <version>1.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hbase.connectors.spark</groupId>
         <artifactId>hbase-spark-protocol-shaded</artifactId>
-        <version>${revision}</version>
+        <version>1.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hbase.thirdparty</groupId>
