@@ -1136,7 +1136,7 @@ class HBaseContext(@transient val sc: SparkContext,
         logInfo("Table " + tableName.toString + " was not found")
       }
       val defaultCompressionStr = config.get("hfile.compression",
-        Compression.Algorithm.NONE.getName)
+        Compression.Algorithm.ZSTD.getName)
       val defaultCompression = HFileWriterImpl
         .compressionByName(defaultCompressionStr)
       val nowTimeStamp = System.currentTimeMillis()
